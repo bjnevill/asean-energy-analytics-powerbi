@@ -35,3 +35,11 @@ Documentation is published first. The original `.pbix` file, any suitable charts
 ## Why it matters
 
 The work demonstrates how to prepare disparate datasets, connect financial/economic indicators and communicate trends relevant to energy markets and business analytics.
+
+## Report and dashboard evidence
+
+The individual assignment report documents three Power BI dashboard themes: **Energy Use & Transition**, **CO₂ Emissions & Economy**, and **Environmental Impact**.
+
+It describes the use of Power Query to standardise and unpivot datasets, country/year dimension relationships to support slicers, and DAX measures for interactive comparisons. The analyses compare Singapore with selected ASEAN economies across renewable-energy adoption, electricity generation, GDP, emissions and environmental metrics.
+
+The original Power BI file was previously provided for project preparation; the repository currently documents the analysis while the binary project file and cleaned image exports are pending upload.
