@@ -1,45 +1,38 @@
-# ASEAN Energy, Sustainability & Economic Analytics (Power BI)
+# ASEAN Energy, Economy and Environmental Analytics
 
-**Ngee Ann Polytechnic · Diploma in Data Science · Data Discovery & Visualisation · Individual academic assignment (2025/26)**
+Individual academic project · Ngee Ann Polytechnic · Data Discovery and Visualisation · Semester 2 folder, October 2025 coursework
 
-An interactive Power BI analysis comparing ASEAN economies across energy use, economic indicators, carbon emissions and environmental impact.
+## Business problem
 
-## Questions explored
+Compare Singapore with selected ASEAN economies to understand patterns in energy demand, renewable adoption, emissions and environmental indicators. The work demonstrates how to combine economic and environmental data for management reporting and exploratory risk discussions.
 
-- How do electricity generation and renewable-energy adoption differ across ASEAN countries?
-- What relationships appear between GDP per capita and CO₂ emissions?
-- How have environmental indicators changed over time?
+![Energy transition dashboard](assets/energy-transition.png)
 
-## Three analytical dashboards
+## Methodology and tools
 
-1. **Energy Use & Transition:** electricity consumption/generation, renewable share and energy mix.
-2. **CO₂ Emissions & Economy:** emissions trends and comparisons with GDP and population.
-3. **Environmental Impact:** forest coverage, surface-temperature changes and waste composition.
+Power BI and Power Query were used to standardise names and types, filter countries, remove unused columns and unpivot wide time series. Related indicators were merged into country–year tables. Student-created Country and Year dimensions support filtering; some snapshot datasets have different coverage or relationships. DAX measures provide selected-period comparisons, with AI assistance disclosed in the original report.
 
-## Data preparation and modelling
+The three dashboards cover energy use and transition, CO₂ emissions and economy, and environmental impact. [Read the submitted report text](reports/submitted-report.md) for preparation steps and the original narrative.
 
-- Cleaned and standardised multi-source datasets with **Power Query**.
-- Reshaped wide time-series data into country–year structures through unpivoting.
-- Created **Country** and **Year** dimension tables and relationships for cross-indicator filtering.
-- Developed interactive slicers and DAX measures, with AI assistance on some measure formulas.
-- Summarised patterns and recommendations in an individual written report.
+## Findings and previews
 
-## Tools
+The report describes rising electricity generation per capita, uneven renewable adoption and continued fossil-fuel dependence. Singapore's emissions trend differs from several developing economies in the selected period. These are descriptive findings from the coursework data, not evidence of a causal relationship.
 
-Power BI · Power Query · DAX · Data Modelling · Exploratory Data Analysis · Dashboard Design · Data Storytelling
+[Emissions and economy preview](assets/emissions-economy.png) · [Environmental impact preview](assets/environmental-impact.png)
 
-## Repository status
+Previews are unchanged images extracted from the submitted report, with their original filters and displayed values. A displayed forest-share donut should not be interpreted as each country's national forest coverage: check its aggregation and denominator against the source table. Temperature and emissions patterns alone do not establish causation.
 
-Documentation is published first. The original `.pbix` file, any suitable charts/screenshots and the written report will be added after reviewing redistribution and privacy considerations. Analysis is coursework, not investment or trading research.
+## Files and reproducibility
 
-## Why it matters
+- `assets/`: three reviewed dashboard screenshots.
+- `reports/submitted-report.md`: original narrative, spelling and values preserved; cover and student identifier removed.
+- `data/dimensions/`: original `CountryDimensionTable.xlsx` and `YearDimensionTable.xlsx`, inspected for identifiers, external links and connection strings. These are supporting dimension tables, not a retail dashboard.
+- `docs/VALIDATION.md`: checks and remaining work.
 
-The work demonstrates how to prepare disparate datasets, connect financial/economic indicators and communicate trends relevant to energy markets and business analytics.
+The original Power BI model was found locally but is not uploaded yet: its compressed embedded DataModel cannot be fully privacy-audited with the available file inspection. Open a copy in Power BI Desktop, inspect Data Source Settings, queries, parameter values and hidden tables, remove local user paths/credentials, and test refresh before publishing a cleaned `.pbix` or `.pbip` export.
 
-## Report and dashboard evidence
+Rebuilding requires the original energy, emissions, GDP, population, forest, waste and temperature datasets and Power BI Desktop. The original report lists OWID, Ember, IMF and a World Bank source; its World Bank citation appears to refer to governance indicators, so exact source provenance requires reconciliation. Raw third-party extracts are not redistributed until their terms and versions are confirmed. The dimension workbooks alone cannot refresh the model.
 
-The individual assignment report documents three Power BI dashboard themes: **Energy Use & Transition**, **CO₂ Emissions & Economy**, and **Environmental Impact**.
+## Limitations and relevance
 
-It describes the use of Power Query to standardise and unpivot datasets, country/year dimension relationships to support slicers, and DAX measures for interactive comparisons. The analyses compare Singapore with selected ASEAN economies across renewable-energy adoption, electricity generation, GDP, emissions and environmental metrics.
-
-The original Power BI file was previously provided for project preparation; the repository currently documents the analysis while the binary project file and cleaned image exports are pending upload.
+Coverage, reporting lags, units and selected years differ across sources. Aggregates and slicers must be checked before interpreting a KPI. Findings are educational and descriptive. The project shows data modelling and communication skills useful in banking, risk and business analytics; it does not claim to measure financial risk or provide trading signals.
